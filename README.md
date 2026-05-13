@@ -1,69 +1,106 @@
-# Ace 🔥- Kanban Board
-<img src="https://i.imgur.com/Eim4CFK.png">
+# Ace Kanban Board
 
-Ace Kanban Board is a powerful and intuitive task management tool designed to help individuals and teams organize their workflow efficiently. By leveraging the Kanban methodology, Ace enables users to visually track task progress, improve productivity, and streamline project management. Whether you're managing personal tasks or collaborating on a team project, Ace offers a smooth and responsive experience.
+<p align="left">
+  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Angular_Material-757575?style=for-the-badge&logo=angular&logoColor=white" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+</p>
 
-The application is deployed and accessible at [https://kanban-op.web.app/](https://kanban-op.web.app/).
+Angular task management board with drag-and-drop and Firebase real-time sync
 
-## Technologies Used
+![Project Preview](https://i.imgur.com/le2vvyG.png)
 
-- **Angular**: A modern framework for building scalable web applications.
-- **Angular Material**: Provides UI components following Google’s Material Design principles.
-- **Firebase**: Backend-as-a-Service for authentication, database, and hosting.
-- **Tailwind CSS**: A utility-first CSS framework for building responsive designs quickly.
+## Introduction
 
-## Features
+Ace Kanban Board is a Kanban task management application built with Angular, Firebase, Angular Material, and Tailwind CSS. It is designed for task tracking, project workflow management, and board-based issue organization. The application supports drag-and-drop task movement, real-time synchronization, and responsive task board interactions for teams and individual users who need a Firebase-backed Kanban board.
 
-- **Task Management**: Create, update, and delete tasks across multiple boards.
-- **Drag-and-Drop Interface**: Easily move tasks between columns to reflect their current status.
-- **Real-time Updates**: Leverages Firebase to provide real-time synchronization across devices.
-- **Responsive Design**: Tailwind CSS ensures a mobile-friendly and responsive user experience.
+## Technical Overview
 
+The application is structured as a single-page Angular project with component-based UI composition and Firebase as the persistence layer. The board state is represented as a set of task columns, where each task moves between statuses using drag-and-drop interactions. Angular Material provides the base interface patterns, while Tailwind CSS handles layout, spacing, and responsive styling.
 
-## Installation
+Firebase is used for authentication, database storage, and real-time data updates. This allows task changes to propagate across connected clients without manual refresh. The project is a good fit for users searching for an Angular Kanban board, a drag-and-drop task manager, or a Firebase real-time project management app.
 
-To set up the project locally, follow these steps:
+## User Instructions
 
-1. **Clone the repository**:
+### Installation
 
-   ```bash
-   git clone https://github.com/renansouz/kanban-ng.git
-   ```
+```bash
+git clone https://github.com/renansouz/kanban-ng.git
+cd kanban-ng
+npm install
+```
 
-2. **Navigate to the project directory**:
+### Firebase setup
 
-   ```bash
-   cd kanban-ng
-   ```
+1. Create a Firebase project.
+2. Add a web app in the Firebase console.
+3. Copy the Firebase configuration values.
+4. Add them to `src/app/app.config.ts`:
 
-3. **Install dependencies**:
+```ts
+export const firebaseConfig = {
+  apiKey: 'YOUR_API_KEY',
+  authDomain: 'YOUR_AUTH_DOMAIN',
+  projectId: 'YOUR_PROJECT_ID',
+  storageBucket: 'YOUR_STORAGE_BUCKET',
+  messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  appId: 'YOUR_APP_ID',
+};
+```
 
-   ```bash
-   npm install
-   ```
+### Run locally
 
-4. **Set up Firebase**:
+```bash
+ng serve
+```
 
-   - Create a new project in [Firebase Console](https://console.firebase.google.com/).
-   - Add a new web app to your Firebase project.
-   - Copy the Firebase configuration settings.
-   - In the project, create a `src/app/app.config.ts` file and add your Firebase configuration:
+Open `http://localhost:4200/` in your browser.
 
-     ```typescript
-     export const firebaseConfig = {
-       apiKey: 'YOUR_API_KEY',
-       authDomain: 'YOUR_AUTH_DOMAIN',
-       projectId: 'YOUR_PROJECT_ID',
-       storageBucket: 'YOUR_STORAGE_BUCKET',
-       messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
-       appId: 'YOUR_APP_ID',
-     };
-     ```
+## Developer Instructions
 
-5. **Run the application**:
+### Local development
 
-   ```bash
-   ng serve
-   ```
+```bash
+ng serve
+```
 
-   Navigate to `http://localhost:4200/` in your browser to view the application.
+### Production build
+
+```bash
+ng build
+```
+
+### Tests
+
+```bash
+ng test
+```
+
+### Angular CLI help
+
+```bash
+ng help
+```
+
+### Contributing
+
+- Create a feature branch from `main`.
+- Keep each pull request focused on one change.
+- Use clear commit messages.
+- Include screenshots or screen recordings for UI changes.
+- Verify the app builds locally before opening a PR.
+- Document Firebase or environment changes in the PR description.
+
+Suggested branch names:
+
+```bash
+feature/task-editing
+fix/firebase-sync
+chore/readme-update
+```
+
+## Support
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-Support_Project-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black)](https://www.buymeacoffee.com/renansouz)
